@@ -1,0 +1,20 @@
+{
+  "name": "curso-travis-ci",
+  "version": "1.0.0",
+  "description": "Curso de Travis CI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/resparzasoto/curso-travis-ci.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/resparzasoto/curso-travis-ci/issues"
+  },
+  "homepage": "https://github.com/resparzasoto/curso-travis-ci#readme"
+}
