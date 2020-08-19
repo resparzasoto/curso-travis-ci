@@ -32,3 +32,15 @@ cache:
   directories:
     - node_modules
 
+jobs:
+  include:
+    - stage: test
+      script: yarn test
+      script: yarn eslint
+    - stage: deploy
+      script: yarn deploy
+
+deploy:
+  provider: heroku
+  on:
+    repo: resparzasoto/curso-travis-ci
