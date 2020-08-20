@@ -10,6 +10,7 @@ git:
 script:
   - yarn build
 notifications:
+  slack: guasaveloper:bPDZ5blSjzAA77zfXdqdIyIX
   email:
     recipients:
       - rubenesparzasoto95@gmail.com
