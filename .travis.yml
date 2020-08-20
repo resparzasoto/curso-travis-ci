@@ -1,46 +1,21 @@
 language: node_js
-os: linux
-
+cache:
+    directories:
+      - node_modules
+      - ~/.npm
+node_js:
+  - 12
 git:
   depth: 3
-
-branches:
-  only:
-    - master
-    - stable
-  except:
-    - legacy
-    - experimental
-
-before_install:
-  - python
-
-install:
-  - yarn install
-
 script:
-  - yarn deploy
-  - yarn test
-
-before_script:
-  - yarn test
-
-after_script:
-  - yarn clean
-
-cache:
-  directories:
-    - node_modules
-
-jobs:
-  include:
-    - stage: test
-      script: yarn test
-      script: yarn eslint
-    - stage: deploy
-      script: yarn deploy
-
+  - yarn build
 deploy:
-  provider: heroku
+  provider: pages
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GITHUB_TOKEN
+  locale_dir: dist/
+  target_branch: gh-page
+  commit_message: "Deploy del proyecto"
   on:
-    repo: resparzasoto/curso-travis-ci
+    branch: master
