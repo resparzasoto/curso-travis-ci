@@ -2,4 +2,4 @@
 
 Curso de Pruebas unitarias con Jest
 
-Modificación de rama develop
+[![Build Status](https://travis-ci.org/resparzasoto/curso-travis-ci.svg?branch=master)](https://travis-ci.org/resparzasoto/curso-travis-ci)
